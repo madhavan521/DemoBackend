@@ -16,7 +16,8 @@ const ProtectRouter = async (req, res, next) => {
 			return res.status(401).json({ error: "Unauthorized: Invalid Token" });
 		}
 
-		const user = await Reseller.findById(decoded.userId) || await Dealer.findById(decoded.userId);
+		const user = await Reseller.findById(decoded.userId)
+			// || await Dealer.findById(decoded.userId);
 		if (!user) {
 			return res.status(404).json({ error: "User not found" });
 		}
