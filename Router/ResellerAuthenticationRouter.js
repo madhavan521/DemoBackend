@@ -4,7 +4,7 @@ const{ signup ,login ,logout, getMe ,forget }= require("../Controller/ResellerAu
 const ProtectRouter = require("../Middleware/ProtectRouter")
 resellerauthrouter.post('/signup', signup)
 resellerauthrouter.post('/login', login)
-resellerauthrouter.post('/logout', logout)
+resellerauthrouter.post('/logout',ProtectRouter, logout)
 resellerauthrouter.get('/me',ProtectRouter , getMe)
 resellerauthrouter.put('/forget' ,forget)
 
