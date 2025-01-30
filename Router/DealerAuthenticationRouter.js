@@ -5,7 +5,7 @@ const ProtectRouter = require("../Middleware/ProtectRouter")
 
 dealerauthrouter.post('/signup', signup)
 dealerauthrouter.post('/login', login)
-dealerauthrouter.post('/logout', logout)
+dealerauthrouter.post('/logout',ProtectRouter, logout)
 dealerauthrouter.get('/me',ProtectRouter , getMe)
 dealerauthrouter.put('/forget' ,forget)
 
