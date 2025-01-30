@@ -8,6 +8,7 @@ const ProtectRouter = async (req, res, next) => {
 		if (!token) {
 			return res.status(401).json({ error: "Unauthorized: No Token Provided" });
 		}
+		console.log(token)
 
 		const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
