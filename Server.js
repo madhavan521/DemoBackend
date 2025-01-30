@@ -18,7 +18,7 @@ const profilerouter = require("./Router/ProfileRouter")
 //MiddleWare
 app.use(express.json())
 app.use(cors({
-    origin: 'https://demo-frontend-gilt.vercel.app', 
+    origin: 'https://demo-frontend-cyan.vercel.app', 
    credentials: true, 
   }));
 app.use(cookieParser())
