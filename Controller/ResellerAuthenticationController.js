@@ -93,7 +93,7 @@ const logout = async(req, res) => {
         res.cookie('jwt', '', {
             maxAge: 0,
             httpOnly: true,
-            sameSite: 'Strict'
+            sameSite: 'none'
         });
         res.status(200).send("Logout Successfully");
     } catch (err) {
